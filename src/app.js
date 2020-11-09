@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SignIn from "./views/signin";
-import theme from "./views/theme/theme";
+import Theme from "./views/theme/theme";
 import {ThemeProvider} from '@material-ui/core/styles';
+import Index from "./views/navigation";
 
 class App extends React.Component {
     render() {
         return (
-            <SignIn/>
+            <Index/>
         );
     }
 }
 
 ReactDOM.render(
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
         <App/>
     </ThemeProvider>,
     document.getElementById("root")

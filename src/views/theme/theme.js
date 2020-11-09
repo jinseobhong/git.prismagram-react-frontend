@@ -29,6 +29,22 @@ const theme = createMuiTheme({
             default: '#fff',
         },
     },
+    overrides: {
+        MuiAppBar: {
+            colorPrimary: {
+                color: "#000000",
+                backgroundColor: "#fff"
+            }
+
+        },
+        MuiButton :{
+            root : {
+                color: "#fff",
+                backgroundColor: '#405DE6',
+                '&:hover': {backgroundColor: '#7e8aff'}
+            }
+        }
+    }
 });
 
 export default theme;

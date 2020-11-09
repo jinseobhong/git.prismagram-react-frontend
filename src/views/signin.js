@@ -2,14 +2,15 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
-import Logo from "./theme/typography/logo";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
 import Copyright from "./theme/typography/copyright";
+import {Typography} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
+
     paper: {
         border: "solid",
         display: 'flex',
@@ -18,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(8),
         flexDirection: 'column',
         justifyContent: "center",
-        width: "100%"
     },
     form: {
         // Fix IE 11 issue.
@@ -26,9 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
     submit: {
         margin: theme.spacing(3, 0, 2),
-        color: theme.palette.action.active,
-        backgroundColor: theme.palette.primary.main,
-        '&:hover': {backgroundColor: theme.palette.primary.light}
+
     },
     link: {
         margin: theme.spacing(2)
@@ -42,7 +40,7 @@ export default function SignIn() {
         <Container component="main" maxWidth="xs">
             <CssBaseline/>
             <Container className={classes.paper}>
-                <Logo/>
+                <Typography component="h1" variant={"h3"}>𝒫𝓇𝒾𝓈𝓂𝒶𝑔𝓇𝒶𝓂</Typography>;
                 <form className={classes.form} noValidate>
                     <TextField
                         variant="outlined"
@@ -69,7 +67,6 @@ export default function SignIn() {
                     <Button
                         type="submit"
                         fullWidth
-                        variant="contained"
                         className={classes.submit}
                     >
                         로그인
